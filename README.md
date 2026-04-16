@@ -4,7 +4,7 @@ Support for [cargo-script RFC](https://rust-lang.github.io/rfcs/3424-cargo-scrip
 
 Just create a new scratch file via `File > New > Scratch File > Rust` and follow the rust-script format defined in the RFC.
 
-First of all, you will need to add the shebang line `#!/usr/bin/env cargo`. This will make a new "run" button pop.
+First of all, you will need to add the shebang line `#!/usr/bin/env -S cargo +nightly -Zscript`. This will make a new "run" button pop.
 
 ![run_button](./assets/run_button.png)
 
