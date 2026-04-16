@@ -20,10 +20,9 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiElement
 import java.nio.charset.Charset
 
-
 class ScriptGutterIconProvider : LineMarkerProvider {
     override fun getLineMarkerInfo(element: PsiElement): LineMarkerInfo<*>? {
-        if (element.text.trimIndent() != "#!/usr/bin/env -S cargo +nightly -Zscript") return null
+        if (element.text != "#!/usr/bin/env cargo") return null
 
         val file = element.containingFile.virtualFile ?: return null
         if (!ScratchUtil.isScratch(file)) return null
